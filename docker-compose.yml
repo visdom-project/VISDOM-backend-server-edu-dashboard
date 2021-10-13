@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.5"
 
 services:
     edu-dashboard:
@@ -28,4 +28,3 @@ services:
 networks:
     edu-dashboard-network:
         external: false
-        name: edu-dashboard-network
