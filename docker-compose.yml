@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
     edu-dashboard:
-        image: ${EDU_DASHBOARD_IMAGE:-edu-dashboard}
+        image: ${EDU_DASHBOARD_IMAGE}
         container_name: edu-dashboard
         build:
             dockerfile: Dockerfile
@@ -13,13 +13,13 @@ services:
             - edu-dashboard-network
 
     edu-dashboard-nginx:
-        image: ${EDU_DASHBOARD_NGINX_IMAGE:-edu-dashboard-nginx}
+        image: ${EDU_DASHBOARD_NGINX_IMAGE}
         container_name: edu-dashboard-nginx
         build:
             dockerfile: Dockerfile-nginx
             context: .
         ports:
-            - ${HOST_PORT:-8000}:3000
+            - ${HOST_PORT}:3000
         volumes:
             - ./pass.wd:/etc/nginx/.htpasswd:ro
         networks:
