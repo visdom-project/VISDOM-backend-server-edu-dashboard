@@ -20,6 +20,7 @@ npm clean-install
     # REACT_APP_ADAPTER_HOST=/api
     # REACT_APP_TOKEN=
     # REACT_APP_COURSE_ID=
+    # REACT_APP_MQTT_HOST=
 npm run-script build
 
 cd ..
