@@ -1,12 +1,17 @@
-# Backend Server For React Application
+# Backend Server for VISDOM Educational Dashboard
+
+<!-- no toc -->
+- [Build instructions](#build-instructions)
+- [Deployment instructions](#deployment-instructions)
+- [Uninstall instructions](#uninstall-instructions)
 
 ## Build instructions
 
 This build step can be done at any machine that has access to the GitLab repositories and to the Docker registry.
 
 ```bash
-git clone git@gitlab.tuni.fi:cs/VISDOM/educational-dashboard.git
-cd educational-dashboard
+git clone git@github.com:visdom-project/VISDOM-educational-dashboard.git
+cd VISDOM-educational-dashboard
 
 npm clean-install
 # at this point create .env file in the following format (with the correct values for the variables)
@@ -18,9 +23,9 @@ npm clean-install
 npm run-script build
 
 cd ..
-git clone git@gitlab.tuni.fi:cs/VISDOM/backend_server_for_react_application.git
-cd backend_server_for_react_application
-cp -R ../educational-dashboard/build/* public
+git clone git@github.com:visdom-project/VISDOM-backend-server-edu-dashboard.git
+cd VISDOM-backend-server-edu-dashboard
+cp -R ../VISDOM-educational-dashboard/build/* public
 
 cp .env.template .env
 # at this point edit file .env with the image names and the host port
